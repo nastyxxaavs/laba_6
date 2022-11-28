@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Python
+      - uses: actions/setup-python@v2.3.3
+      - name: Maven Package
+        run: mvn -B clean package -DskipTests
