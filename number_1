@@ -1,0 +1,10 @@
+#include <stdio.h> //#1
+int main() {
+    int c;
+    double a;
+    scanf("%d", &c);
+    scanf("%lf", &a);
+    printf("%d\n", c);
+    printf("%lf\n", a);
+    return 0;
+}
